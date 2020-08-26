@@ -11,7 +11,7 @@ GAME RULES:
 
 
 //PROJECT PIG GAME Starts=====================================
- var scores, roundScore, activePlayer,gamePlaying=true;
+var scores, roundScore, activePlayer,gamePlaying=true;
 scores=[0,0];//to keep track of global score of both players
 roundScore=0;// There will be only one player scoring at a time so one variable taking account of current score
 activePlayer=0;//0 for first player, 1 for second player
