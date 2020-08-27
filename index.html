@@ -13,10 +13,10 @@
         
         
         <div class="wrapper clearfix">
-           <!-- Adding Input Field.
-                <label for="win-score" class= "win-score">Enter the score to win: </label>
-                <input type="text"  id="win-score" placeholder="Winning score...">
-           -->
+           <!-- Adding Input Field.  -->
+               
+                <input type="text"  id="win-score" placeholder="maximum score to win:">
+         
             <div class="player-0-panel active">
                 <div class="player-name" id="name-0">Player 1</div>
                 <div class="player-score" id="score-0">43</div>
@@ -35,29 +35,35 @@
                 </div>
             </div>
             
-            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
-            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            <button class="btn-new btn-style"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll btn-style"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold btn-style"><i class="ion-ios-download-outline"></i>Hold</button>
             
             <img src="dice-5.png" alt="Dice" class="dice">
-        </div>
-        
-        <script src="app-2.js"></script>
-    <!--<footer>
-         <div class="rules">
-                <p>
-                    GAME RULES:
+            <img src="dice-5.png" alt="Dice" class="dice-2">
             
+              <div class="rules">
+                <p class="rule-heading">
+                    GAME RULES:
+                </p>
+                  <p>
                     <ul>
                         <li>The game has 2 players, playing in rounds</li>
-                        <li> In each turn, a player rolls a dice as many times as he whishes. Each result get added to his ROUND score</li>
-                        <li>BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn</li>
-                        <li>The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's           turn</li>
-                        <li>The first player to reach 100 points on GLOBAL score wins the game</li>
+                        <li> In each turn, a player rolls two dice as many times as he whishes. Each result get added to his ROUND score</li>
+                        <li>BUT, if the player rolls a 1 in any of the dices, all his ROUND score gets lost and the next player gets the turn</li>
+                        <li>The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score, but doing so gives the turn to the the next player.</li>
+                        <li>The first player to reach 100 points on GLOBAL score wins the game or the players can choose the maximum score to win.</li>
                     </ul>
                 </p>
             </div>
-    </footer>
--->
+            
+        </div>
+        
+        <script src="app-3.js"></script><!--For third challenge with two dices.-->
+        
+   
+       
+
+
     </body>
 </html>
