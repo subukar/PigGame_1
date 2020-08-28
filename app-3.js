@@ -20,13 +20,14 @@ initialize();
 
 function initialize(){
     //variables for scores 
-
-    var scores, roundScore, activePlayer;
+    
     scores=[0,0];//to keep track of global score of both players
     roundScore=0;// There will be only one player scoring at a time so one variable taking account of current score
     activePlayer=0;//0 for first player, 1 for second player
-  
     gamePlaying=true;
+    document.getElementById('win-score').disabled=false;
+    alert('Set the maximum score to win the game . The default is 100');
+    
     //To change the CSS of some element.
     document.querySelector('.dice').style.display='none';
     document.querySelector('.dice-2').style.display='none';
@@ -45,8 +46,10 @@ function initialize(){
     //giving the active class only to player 1 which s a default.
     document.querySelector('.player-0-panel').classList.add('active');
     
-    document.getElementById('name-0').textContent='PLAYER 1';
-    document.getElementById('name-1').textContent='PLAYER 2';
+    if((isNaN(document.getElementById('win-score').value) )){
+        alert('Please type a valid max-score');
+    }
+
 }
 
 
@@ -98,6 +101,11 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
     nextDice=Math.ceil(Math.random()*6);
     //console.log(currDice);
     
+    //to disable input field when game started.
+    document.getElementById('win-score').disabled=true;
+    //console.log(document.getElementById('win-score').value);
+
+
     //2.display the result
     
     // declaring the variable diceDOM to reuse the big syntax(document.querySelector('.dice')) with a small word
@@ -116,13 +124,11 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
     if(currDice!==1 && nextDice!==1){
         //add the score
         roundScore+=currDice+nextDice;
-        document.querySelector('#current-'+activePlayer).textContent= roundScore;
+        document.querySelector('#current-'+activePlayer).textContent = roundScore;
    
         
     }
    
-        
-        
     else{
         nextPlayer();
        
@@ -133,7 +139,7 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
     
  
     
-})
+});
 
 //Implementing the 'HOLD' button.
 
@@ -167,7 +173,7 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
     }
     
     
-})
+});
 
 
 function nextPlayer(){
@@ -198,7 +204,15 @@ document.querySelector('.btn-new').addEventListener('click',initialize);
 
 
 
-
+/*document.querySelector('.rule-heading').addEventListener('click',function(){
+    var x=document.querySelector('.game-rules');
+    if(x.style.display='none'){
+        x.style.display='block';
+    }
+    else{
+        x.style.display='none';
+    }
+});*/
 
 
 

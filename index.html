@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <script src="jquery.js" type="text/javascript"></script>
+        <script src="declarativeToggle.js" type="text/javascript"></script>
         <link type="text/css" rel="stylesheet" href="style-2.css">
         
         <title>Pig Game Extended</title>
@@ -15,7 +17,7 @@
         <div class="wrapper clearfix">
            <!-- Adding Input Field.  -->
                
-                <input type="text"  id="win-score" placeholder="maximum score to win:">
+                <input type="number" min="10" max='1000'  id="win-score" placeholder="maximum score to win:">
          
             <div class="player-0-panel active">
                 <div class="player-name" id="name-0">Player 1</div>
@@ -43,18 +45,16 @@
             <img src="dice-5.png" alt="Dice" class="dice-2">
             
               <div class="rules">
-                <p class="rule-heading">
-                    GAME RULES:
+                <p class="rule-heading toggle-btn" data-toggle-target=".game-rules">
+                    GAME RULES: Click to know
                 </p>
                   <p>
-                    <ul>
+                    <ul class="game-rules">
                         <li>The game has 2 players, playing in rounds</li>
-                        <li> In each turn, a player rolls two dice as many times as he wishes. Each result get added to his ROUND score</li>
+                        <li> In each turn, a player rolls two dice as many times as he whishes. Each result get added to his ROUND score</li>
                         <li>BUT, if the player rolls a 1 in any of the dices, all his ROUND score gets lost and the next player gets the turn</li>
-                        <li>The player can choose to 'Hold' button, which means that his ROUND score gets added to his GLOBAL score, but doing so gives the turn to the next player.</li>
-                        <li>The first player to reach 100 points on GLOBAL score wins the game. </li>
-                        <li>The players can also choose the maximum score to win anytime during the game.
-                        </li>
+                        <li>The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score, but doing so gives the turn to the the next player.</li>
+                        <li>The first player to reach 100 points on GLOBAL score wins the game or the players can choose the maximum score to win.</li>
                     </ul>
                 </p>
             </div>
