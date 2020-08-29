@@ -66,6 +66,9 @@ body {
     word-spacing: 2px;
 }
 
+.rule-heading:hover{
+    background-color: black;
+}
 .toggle-btn-visible{
     display: block;
 }
@@ -213,8 +216,8 @@ i {
     background-color:#3b4a4d;
     color: white;
     text-transform: highlight; 
-    border-radius: 2px;
-    padding: 5px;
+    border-radius: 5px;
+    padding: 5px 2px;
 }
 
 /*animation effect*/
