@@ -29,7 +29,7 @@ body {
 /*Styling the rules*/
 .game-rules{
     position: absolute;
-    top: 660px;
+    top: 600px;
     padding: 20px 50px;
     margin: 30px;
     box-sizing: border-box;
@@ -48,7 +48,7 @@ body {
 
 .rule-heading{
     position: absolute;
-    top: 600px;
+    top: 520px;
     color: white; 
     background-color: #3b4a4d;
     text-shadow: 1px 1px gray;
@@ -60,8 +60,8 @@ body {
     font-size: 20px;
     box-sizing: border-box;
     border-radius: 5px;
-    width: 500px;
-    transform: translateX(50%);
+    width: 450px;
+    transform: translateX(65%);
     cursor: pointer;
     word-spacing: 2px;
 }
@@ -83,6 +83,45 @@ body {
 
 
 /*New styles for rules*/
+
+/*Game name styling */
+/*@keyframes nameStyle{
+    0%{
+        transform: scale(1);
+      
+    }
+    50%{
+       
+        transform: scale(0.5);
+        color: blue;
+    }
+    100%{
+        transform: scale(1);
+       
+    }
+}*/
+.game-name{
+    position: absolute;
+    top: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    font-weight: 5000;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 350%;
+    word-spacing: 5;
+    text-shadow: 2px 2px 2px black; 
+    color: blueviolet;
+    /*animation-name: nameStyle;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition-property: all;*/
+
+}
+
+
 
 
 
@@ -208,7 +247,8 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-new { top: 45px;}
+.btn-new { top: 100px;
+            }
 .btn-roll { top: 423px;}
 .btn-hold { top: 467px;}
 
@@ -278,11 +318,13 @@ i {
 
 #win-score{
     position: absolute;
-    left: 50%;
+    left: 30px;
     top: 520px;
     padding: 7px;
     text-transform: uppercase;
     width: 200px;
-    transform: translateX(-50%);
+    color: black;
+    font-weight: bold;
+  
   
 }

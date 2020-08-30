@@ -130,7 +130,8 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
     }
    
     else{
-        nextPlayer();
+        //Adding a delay of 0.7 sec before changing the turn when a 1 is rolled on a dice.
+        setTimeout(nextPlayer,700);
        
     }
     
