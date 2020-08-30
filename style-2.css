@@ -29,7 +29,7 @@ body {
 /*Styling the rules*/
 .game-rules{
     position: absolute;
-    top: 600px;
+    top: 120px;
     padding: 20px 50px;
     margin: 30px;
     box-sizing: border-box;
@@ -110,7 +110,7 @@ body {
     transform: translateX(-50%);
     font-size: 350%;
     word-spacing: 5;
-    text-shadow: 2px 2px 2px black; 
+    text-shadow: 3px 3px 3px black; 
     color: blueviolet;
     /*animation-name: nameStyle;
     animation-duration: 5s;
